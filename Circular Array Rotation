@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n, k, q;
+    cin >> n >> k >> q;
+    int a[n];
+    vector<int> v;
+    for(int i = 0; i < n; i++){
+        cin >> a[i];
+    }
+    k = k % n;
+    for(int i = n-k; i < n; i++){
+    	v.push_back(a[i]);
+	  }
+	  for(int i = 0; i < n-k; i++){
+    	v.push_back(a[i]);
+	  }
+    while(q--){
+        int temp;
+        cin >> temp;
+        cout << v[temp] << '\n';
+    }
+
+    return 0;
+}
